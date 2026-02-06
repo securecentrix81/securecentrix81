@@ -1,7 +1,99 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Centrix81</title>
+    <style>
+      button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        background-color: #00dd6b;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background-color: #00cc5b;
+      }
+      #secret-content {
+        display: none;
+      }
+      .captcha-container {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        width: 300px;
+        height: 70px;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        z-index: 10;
+      }
+      .captcha-checkbox {
+        flex: 0;
+        height: calc(100% - 40px);
+        margin: 0 0 0 20px;
+        aspect-ratio: 1/1;
+        border: 2px solid #c1c1c1;
+        border-radius: 3px;
+        background: #fff;
+      }
+      .captcha-text {
+        font-size: 1em;
+        flex: 1;
+      }
+      .captcha-expired {
+        font-size: 0.75em;
+        color: #f00;
+        display: none;
+      }
+      .large {
+        font-size: 1.5em;
+        max-width: 100%;
+        overflow-wrap: break-word;
+      }
+
+      .money-giveaway-container {
+        position: relative;
+        overflow: hidden;
+        height: 700px;
+      }
+      
+      .money-giveaway-instructions {
+        height: 100%;
+        overflow: scroll;
+      }
+
+      .blur-mask {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(transparent 0%, white 75%, white 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+      }
+      .lower-captcha-container {
+        margin-top: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .blur-mask .captcha-container {
+        pointer-events: auto;
+      }
+    </style>
     <style>
       .newtag {
         color: #ff0000;
@@ -12,20 +104,6 @@
         color: #0000ff;
       }
     </style>
-    <!-- start of "normal person" blocker -->
-<div id="d0082e1c-16cc-4a7e-b920-d2b5bf8c3ce1" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;background-color:#ffffff;z-index:2147483649;">Validating authentication state. Login at the <a href="/">home page</a></div>
-<script>
-  try {
-    if (!localStorage.getItem("userIsValidated")) {
-      window.location.replace("/")
-    } else {
-      document.getElementById("d0082e1c-16cc-4a7e-b920-d2b5bf8c3ce1").remove()
-    }
-  } catch (e) {
-    window.location.replace("/")
-  }
-</script>
-<!-- end of "normal person" blocker -->
   </head>
   <body>
     <h1><a href="/webretro">webretro</a></h1>
@@ -38,14 +116,373 @@
     <h1><a href="/gfiles">gfiles</a></h1>
     <h1><a href="/polytrack">polytrack</a></h1>
     <h1><a href="/madalin-cars-multiplayer">madalin cars multiplayer</a></h1>
-    <h1><a href="/madalin-stunt-cars-2">madalin stunt cars 2</a><sup class="newtag" remove="1765526400000">NEW!</sup></h1>
-    <h1><a href="/madalin-stunt-cars-3">madalin stunt cars 3</a><sup class="newtag" remove="1765224000000">NEW!</sup></h1>
+    <h1><a href="/madalin-stunt-cars-2">madalin stunt cars 2</a></h1>
+    <h1><a href="/madalin-stunt-cars-3">madalin stunt cars 3</a></h1>
     <h1><a href="/other-games">Other games</a></h1>
+    <hr>
+    <div class="money-giveaway-container">
+      <div class="money-giveaway-instructions">
+        <h2>Hi! This is definitely Mr. Beast!</h2>
+        <p>We are doing a <strong><span class="us-debt">$38,422,818,570,606.64</span></strong> giveaway on Secure Centrix81. Anyone can instantly do this following these specific, detailed steps:</p>
+        <hr>
+        <h2>PHASE 1: PRIMORDIAL EXISTENCE</h2>
+        <h3>Step 1: Exist as matter</h3>
+        <p>To complete the transaction, you must first exist as matter within the universe. If you do not exist as matter, you will be nothing. If you are nothing, you cannot interact with physical objects. If you cannot interact with physical objects, you cannot press keyboard keys, and you will not be able to complete the transaction.</p>
+        <h3>Step 2: Survive the formation of Earth</h3>
+        <p>To continue, you must ensure that approximately 4.5 billion years ago, the accretion disk around the young Sun coalesced into the planet Earth. If Earth does not form, there will be no ground to stand on. If there is no ground to stand on, you will float in the vacuum of space. If you float in the vacuum of space, you will suffocate and freeze simultaneously, and you will not be able to complete the transaction.</p>
+        <h3>Step 3: Allow the Moon to form</h3>
+        <p>To continue, you must ensure that a Mars-sized object called Theia collides with the early Earth, ejecting debris that forms the Moon. If the Moon does not form, Earth&#39;s axial tilt will be unstable. If Earth&#39;s axial tilt is unstable, seasons will be chaotic. If seasons are chaotic, agriculture will be impossible. If agriculture is impossible, civilization cannot develop, and you will not be able to complete the transaction.</p>
+        <h3>Step 4: Wait for the Late Heavy Bombardment to end</h3>
+        <p>To continue, you must wait approximately 700 million years for asteroids to stop constantly hitting Earth. If asteroids keep hitting Earth, the surface will be molten. If the surface is molten, you cannot stand on it. If you cannot stand on it, you cannot sit at a desk. If you cannot sit at a desk, you cannot use a computer, and you will not be able to complete the transaction.</p>
+        <h3>Step 5: Develop abiogenesis</h3>
+        <p>To continue, organic molecules must spontaneously combine near hydrothermal vents or in warm shallow pools to form the first self-replicating RNA strands. If abiogenesis does not occur, life will not exist. If life does not exist, you will not exist. If you do not exist, you cannot claim the giveaway, and you will not be able to complete the transaction.</p>
+        <h3>Step 6: Become a prokaryote</h3>
+        <p>To continue, you must evolve into a single-celled organism without a nucleus. If you do not become a prokaryote, you will remain as disorganized organic molecules. If you remain as disorganized organic molecules, you cannot metabolize food. If you cannot metabolize food, you will have no energy to evolve, and you will not be able to complete the transaction.</p>
+        <h3>Step 7: Invent photosynthesis</h3>
+        <p>To continue, cyanobacteria must develop the ability to convert sunlight into energy while producing oxygen as a byproduct. If photosynthesis is not invented, the atmosphere will remain toxic. If the atmosphere remains toxic, complex life cannot breathe. If complex life cannot breathe, humans will not evolve. If humans do not evolve, there will be no one to claim the giveaway, and you will not be able to complete the transaction.</p>
+        <h3>Step 8: Survive the Great Oxidation Event</h3>
+        <p>To continue, you must survive the mass extinction caused by oxygen poisoning the atmosphere approximately 2.4 billion years ago. If you do not survive the Great Oxidation Event, you will die from oxygen exposure. If you die from oxygen exposure, you cannot continue evolving. If you cannot continue evolving, you will never develop lungs, and you will not be able to complete the transaction.</p>
+        <h3>Step 9: Develop eukaryotic cells through endosymbiosis</h3>
+        <p>To continue, a larger prokaryote must engulf a smaller one, which becomes a mitochondrion. If endosymbiosis does not occur, cells will not have mitochondria. If cells do not have mitochondria, they cannot produce enough ATP. If they cannot produce enough ATP, complex multicellular life is impossible, and you will not be able to complete the transaction.</p>
+        <h3>Step 10: Become multicellular</h3>
+        <p>To continue, individual cells must begin cooperating and specializing into tissues. If you do not become multicellular, you will remain a single cell forever. If you remain a single cell forever, you cannot have a brain. If you cannot have a brain, you cannot think about claiming the giveaway, and you will not be able to complete the transaction.</p>
+        <h3>Step 11: Develop bilateral symmetry</h3>
+        <p>To continue, you must evolve a body plan with a left side and a right side. If you do not develop bilateral symmetry, you will be a formless blob. If you are a formless blob, you cannot have two hands. If you cannot have two hands, you cannot type on a keyboard efficiently, and you will not be able to complete the transaction.</p>
+        <h3>Step 12: Evolve a notochord</h3>
+        <p>To continue, you must develop a primitive spinal cord structure. If you do not evolve a notochord, you will be an invertebrate. If you are an invertebrate, your body will be soft and squishy. If your body is soft and squishy, you cannot support the weight of a large brain, and you will not be able to complete the transaction.</p>
+        <h3>Step 13: Develop a spine</h3>
+        <p>To continue, your notochord must be replaced by a vertebral column made of bone. If you do not develop a spine, you will be a hagfish. If you are a hagfish, you cannot sit upright. If you cannot sit upright, you cannot properly view a computer monitor, and you will not be able to complete the transaction.</p>
+        <h3>Step 14: Evolve jaws</h3>
+        <p>To continue, gill arches near your throat must evolve into a hinged jaw structure. If you do not evolve jaws, you will be a lamprey. If you are a lamprey, you can only eat by attaching to other fish and sucking their blood. If you can only suck blood, you cannot eat a balanced diet. If you cannot eat a balanced diet, you will lack the nutrients for brain development, and you will not be able to complete the transaction.</p>
+        <h3>Step 15: Develop bony fins</h3>
+        <p>To continue, your fins must develop internal bone structures that can support weight. If you do not develop bony fins, you cannot crawl onto land. If you cannot crawl onto land, you will be stuck in the ocean forever. If you are stuck in the ocean forever, your computer will short-circuit from water damage, and you will not be able to complete the transaction.</p>
+        <h3>Step 16: Transition to land</h3>
+        <p>To continue, approximately 375 million years ago, you must evolve from a lobe-finned fish into a tetrapod like Tiktaalik. If you do not transition to land, you will remain aquatic. If you remain aquatic, you cannot breathe air. If you cannot breathe air, you cannot speak to customer support if there are issues with your transaction, and you will not be able to complete the transaction.</p>
+        <h3>Step 17: Develop lungs</h3>
+        <p>To continue, your swim bladder must evolve into air-breathing lungs. If you do not develop lungs, you will suffocate on land. If you suffocate on land, you will die. If you die, you cannot receive money, and you will not be able to complete the transaction.</p>
+        <h3>Step 18: Evolve amniotic eggs</h3>
+        <p>To continue, you must evolve eggs with protective membranes that prevent them from drying out. If you do not evolve amniotic eggs, you must return to water to reproduce. If you must return to water to reproduce, you cannot colonize inland areas. If you cannot colonize inland areas, prime real estate will be unavailable, and you will not be able to complete the transaction.</p>
+        <h3>Step 19: Survive the Permian-Triassic extinction</h3>
+        <p>To continue, you must survive the largest mass extinction in Earth&#39;s history, which killed 96% of all marine species. If you do not survive the Permian-Triassic extinction, you will be dead. If you are dead, you cannot evolve into a mammal. If you cannot evolve into a mammal, you will not be able to complete the transaction.</p>
+        <h3>Step 20: Develop warm-bloodedness</h3>
+        <p>To continue, you must evolve endothermy, the ability to regulate your own body temperature. If you do not develop warm-bloodedness, you will be a cold-blooded reptile. If you are a cold-blooded reptile, you will be sluggish in cold weather. If you are sluggish in cold weather, you cannot react quickly enough to click &quot;Claim&quot; before the offer expires, and you will not be able to complete the transaction.</p>
+        <h3>Step 21: Evolve fur or hair</h3>
+        <p>To continue, you must develop hair follicles covering your body for insulation. If you do not evolve fur, you will lose body heat rapidly. If you lose body heat rapidly, you must bask in the sun constantly. If you must bask in the sun constantly, you will not have time to use the computer, and you will not be able to complete the transaction.</p>
+        <h3>Step 22: Develop mammary glands</h3>
+        <p>To continue, you must evolve the ability to produce milk to feed your young. If you do not develop mammary glands, your offspring must fend for themselves immediately. If your offspring must fend for themselves immediately, they cannot have an extended childhood for learning. If they cannot have an extended childhood, they cannot develop complex cognition, and you will not be able to complete the transaction.</p>
+        <h3>Step 23: Survive the asteroid that killed the dinosaurs</h3>
+        <p>To continue, 66 million years ago, an asteroid must strike the Yucatan Peninsula, and you must be small enough to survive the impact winter. If you do not survive the asteroid impact, you will be extinct like the dinosaurs. If you are extinct, there will be no mammals to evolve into humans. If there are no humans, there will be no one to claim the <span class="us-debt">$38,422,818,570,606.64</span>, and you will not be able to complete the transaction.</p>
+        <h3>Step 24: Develop opposable thumbs</h3>
+        <p>To continue, your hands must evolve so that your thumb can touch your other fingers. If you do not develop opposable thumbs, you cannot grip objects precisely. If you cannot grip objects precisely, you cannot hold a mouse. If you cannot hold a mouse, you cannot click on buttons, and you will not be able to complete the transaction.</p>
+        <h3>Step 25: Develop stereoscopic color vision</h3>
+        <p>To continue, your eyes must evolve to face forward and perceive depth and color. If you do not develop stereoscopic color vision, you cannot judge distances accurately. If you cannot judge distances accurately, you will miss the &quot;Claim&quot; button when clicking. If you miss the &quot;Claim&quot; button, you will not be able to complete the transaction.</p>
+        <h3>Step 26: Evolve bipedalism</h3>
+        <p>To continue, you must begin walking on two legs instead of four. If you do not evolve bipedalism, your hands will be occupied with walking. If your hands are occupied with walking, you cannot use them to type. If you cannot use them to type, you cannot enter your payment information, and you will not be able to complete the transaction.</p>
+        <h3>Step 27: Develop a larger brain</h3>
+        <p>To continue, your brain must triple in size over several million years. If you do not develop a larger brain, you will have the intelligence of a chimpanzee. If you have the intelligence of a chimpanzee, you can use simple tools but cannot understand websites. If you cannot understand websites, you will click on the wrong links, and you will not be able to complete the transaction.</p>
+        <h3>Step 28: Evolve the FOXP2 gene mutation</h3>
+        <p>To continue, a specific gene mutation must occur that allows for the fine motor control of lips, tongue, and larynx necessary for speech. If you do not evolve the FOXP2 gene mutation, you cannot produce complex speech sounds. If you cannot produce complex speech sounds, you cannot call customer service if your payment fails, and you will not be able to complete the transaction.</p>
+        <h3>Step 29: Develop symbolic thinking</h3>
+        <p>To continue, your brain must evolve the capacity for abstract thought and symbolism. If you do not develop symbolic thinking, you cannot understand that green pieces of paper represent value. If you cannot understand that green pieces of paper represent value, you will not want the $38,422,818,570,606.64 because it will seem meaningless, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 2: PRIMITIVE SURVIVAL</h2>
+        <h3>Step 30: Start living</h3>
+        <p>To complete the transaction, you will first have to exist as a living human being. If you are not alive, you will not be able to do anything. If you cannot do anything, you cannot access the internet. If you cannot access the internet, you cannot visit Secure Centrix81, and you will not be able to complete the transaction.</p>
+        <h3>Step 31: Confirm your existence</h3>
+        <p>To continue, you must confirm that you exist. This involves achieving a basic level of consciousness and self-awareness. You must think &quot;I think, therefore I am&quot; at least once. If you do not confirm your existence, you will suffer from an existential crisis. If you suffer from an existential crisis, you will question whether anything is real. If you question whether anything is real, you will doubt whether the giveaway is real. If you doubt whether the giveaway is real, you will not claim it, and you will not be able to complete the transaction.</p>
+        <h3>Step 32: Breathe oxygen</h3>
+        <p>To continue, you must inhale air containing approximately 21% oxygen through your nostrils or mouth, allowing the oxygen molecules to diffuse across your alveolar membranes into your bloodstream. If you do not breathe oxygen, your cells will be unable to perform aerobic respiration. If your cells cannot perform aerobic respiration, you will die within approximately 3-6 minutes. If you die, you will not be able to complete the transaction.</p>
+        <h3>Step 33: Find a source of fresh water</h3>
+        <p>To continue, you must locate a stream, river, lake, or spring containing water with less than 500 parts per million of total dissolved solids. If you do not find fresh water, you will become dehydrated within 3 days. If you become dehydrated, your organs will begin to fail. If your organs fail, you will die, and you will not be able to complete the transaction.</p>
+        <h3>Step 34: Identify edible plants</h3>
+        <p>To continue, you must learn to distinguish between edible and poisonous plants through trial and error, passing this knowledge to your offspring. If you do not identify edible plants, you will eat poisonous berries. If you eat poisonous berries, you will die of organ failure. If you die of organ failure, you will not be able to complete the transaction.</p>
+        <h3>Step 35: Start a fire using friction</h3>
+        <p>To continue, you must gather dry tinder such as dried grass, bark shavings, or fungus. Then you must create a fire bow consisting of a curved stick with a cord, a spindle made of dry softwood, and a fireboard with a notch carved into it. You must place the spindle in the notch, wrap the bowstring around the spindle, and rapidly move the bow back and forth while applying downward pressure. This creates friction that heats the wood to approximately 427°C (800°F), at which point the wood dust ignites. If you do not start a fire, you will freeze during nighttime when temperatures drop. If you freeze, you will die of hypothermia. If you die of hypothermia, you will not be able to complete the transaction.</p>
+        <h3>Step 36: Construct a shelter</h3>
+        <p>To continue, you must build a structure to protect yourself from rain, wind, and predators. Begin by finding a fallen tree or creating an A-frame with two long branches. Layer smaller branches at a 45-degree angle, then cover with leaves, moss, and bark for insulation. The shelter should be just large enough to fit your body to maximize heat retention. If you do not construct a shelter, you will be exposed to the elements. If you are exposed to the elements, you will develop hypothermia or be eaten by wolves. If you develop hypothermia or are eaten by wolves, you will not be able to complete the transaction.</p>
+        <h3>Step 37: Build tools made from stone</h3>
+        <p>To continue, you must select a hard stone such as flint, obsidian, or chert that fractures conchoidally. Using a hammerstone, strike the edge of the core stone at a precise angle of approximately 30 degrees to remove sharp flakes through a process called knapping. These flakes can be further refined through pressure flaking using an antler or bone tool to create a sharp edge. The resulting tools should include hand axes for butchering, scrapers for processing hides, and pointed blades for hunting. If you do not build tools made from stone, you will not be able to hunt animals effectively. If you cannot hunt animals, you will starve. If you starve, you will die, and you will not be able to complete the transaction.</p>
+        <h3>Step 38: Invent the spear</h3>
+        <p>To continue, you must attach a sharpened stone point to a wooden shaft using plant fibers and tree resin as adhesive. The shaft should be approximately 2 meters long and straight, made from a hardwood such as ash or yew. The point should be hafted by splitting the end of the shaft, inserting the stone, and wrapping tightly with wet sinew that shrinks as it dries. If you do not invent the spear, you cannot hunt large animals from a safe distance. If you cannot hunt large animals, you will lack sufficient protein in your diet. If you lack sufficient protein, your brain cannot develop properly, and you will not be able to complete the transaction.</p>
+        <h3>Step 39: Learn to preserve meat</h3>
+        <p>To continue, you must develop methods to prevent meat from rotting. This can be done by smoking the meat over a fire for several days, which dehydrates it and deposits antimicrobial compounds. Alternatively, you can dry meat in the sun, salt it heavily, or freeze it in cold climates. If you do not learn to preserve meat, all your food will spoil within days. If all your food spoils, you must hunt constantly. If you must hunt constantly, you will have no time to develop civilization, and you will not be able to complete the transaction.</p>
+        <h3>Step 40: Domesticate the dog</h3>
+        <p>To continue, you must selectively befriend wolves that are less aggressive and more tolerant of humans. Over many generations, feed and breed the friendliest wolves until they become dogs. Dogs will help you hunt, guard your camp, and provide companionship. If you do not domesticate the dog, you will be alone. If you are alone, hunting will be much more difficult. If hunting is difficult, you will spend all your time finding food instead of advancing technologically, and you will not be able to complete the transaction.</p>
+        <h3>Step 41: Invent the needle</h3>
+        <p>To continue, you must take a thin splinter of bone and carefully grind one end to a sharp point. Then, using a stone awl, drill a small hole near the other end. This creates a needle that can be used with plant fibers or animal sinew to sew hides together. If you do not invent the needle, you cannot make fitted clothing. If you cannot make fitted clothing, you cannot survive in cold climates. If you cannot survive in cold climates, you cannot inhabit most of the planet, and you will not be able to complete the transaction.</p>
+        <h3>Step 42: Invent the atlatl</h3>
+        <p>To continue, you must carve a stick approximately 50cm long with a hook or spur at one end. This device acts as a lever that extends your arm, allowing you to throw a dart or spear much faster and farther than by hand alone. The atlatl can increase projectile velocity by up to 150%. If you do not invent the atlatl, you cannot hunt effectively from a distance. If you cannot hunt from a distance, you will be injured by large prey animals. If you are injured, you cannot complete tasks, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 3: AGRICULTURAL REVOLUTION</h2>
+        <h3>Step 43: Observe plant growth cycles</h3>
+        <p>To continue, you must notice that seeds dropped on the ground grow into new plants the following year. This requires remaining in one location long enough to observe multiple growing seasons. You must correlate the position of stars with optimal planting times. If you do not observe plant growth cycles, you will not realize that you can control food production. If you do not realize this, you will remain a hunter-gatherer forever, and you will not be able to complete the transaction.</p>
+        <h3>Step 44: Invent agriculture</h3>
+        <p>To continue, you must intentionally plant seeds in prepared soil. First, clear a plot of land by burning vegetation or cutting it with stone tools. Then, use a digging stick to create holes in the soil, place seeds inside, and cover them. You must also weed the area regularly and protect the plants from animals. Begin with easily domesticated crops like wheat, barley, rice, or maize depending on your region. If you do not invent agriculture, you must constantly move to find food. If you must constantly move, you cannot build permanent structures. If you cannot build permanent structures, you cannot have a fixed address for your giveaway money to be sent to, and you will not be able to complete the transaction.</p>
+        <h3>Step 45: Domesticate animals</h3>
+        <p>To continue, you must capture and breed docile specimens of goats, sheep, cattle, or pigs. Select animals that are calm around humans and reproduce well in captivity. Over many generations, these animals will become domesticated, providing a reliable source of meat, milk, leather, and wool. If you do not domesticate animals, you must hunt for all meat. If you must hunt for all meat, your food supply is unreliable. If your food supply is unreliable, you cannot support a large population, and you will not be able to complete the transaction.</p>
+        <h3>Step 46: Invent pottery</h3>
+        <p>To continue, you must find clay deposits near rivers or streams. Mix the clay with water until it becomes malleable, then shape it into a container by coiling long ropes of clay on top of each other and smoothing the surfaces. Allow the clay to dry slowly to prevent cracking. Then fire the pottery in a kiln or pit fire at temperatures above 600°C. The heat transforms the clay into a hard, waterproof ceramic. If you do not invent pottery, you cannot store grain or water effectively. If you cannot store grain, you cannot survive winters. If you cannot survive winters, you will die, and you will not be able to complete the transaction.</p>
+        <h3>Step 47: Develop irrigation</h3>
+        <p>To continue, you must dig channels from a river to your fields to provide water during dry seasons. Calculate the gradient carefully so water flows by gravity. Build levees to control flooding and gates to regulate water flow. If you do not develop irrigation, your crops will die during droughts. If your crops die, there will be famine. If there is famine, your civilization will collapse, and you will not be able to complete the transaction.</p>
+        <h3>Step 48: Invent the plow</h3>
+        <p>To continue, you must create a tool that breaks up soil more efficiently than a digging stick. Carve a wooden blade and attach it to a frame that can be pulled by domesticated oxen. The plow should cut into the soil and turn it over, burying weeds and aerating the earth. If you do not invent the plow, farming will be slow and laborious. If farming is slow, you cannot produce surplus food. If you cannot produce surplus food, you cannot support non-farmers like craftsmen and rulers, and you will not be able to complete the transaction.</p>
+        <h3>Step 49: Invent the wheel</h3>
+        <p>To continue, you must cut a circular disc from a tree trunk or assemble planks into a round shape. Then create an axle by carving a cylindrical rod. The wheel must rotate freely around the axle, which is attached to a frame. This creates a cart that can transport heavy loads much more efficiently than carrying or dragging. If you do not invent the wheel, transporting goods will be extremely slow. If transporting goods is slow, trade cannot develop. If trade cannot develop, you cannot access resources from other regions, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 4: METALLURGY AND THE METAL AGES</h2>
+        <h3>Step 50: Discover native copper</h3>
+        <p>To continue, you must search for greenish-blue rocks in areas with geological activity. Native copper occasionally appears as pure metallic nuggets on the Earth&#39;s surface. Identify copper by its distinctive reddish color and malleability. If you do not discover native copper, you will not know that metals exist. If you do not know that metals exist, you will be stuck with stone tools forever, and you will not be able to complete the transaction.</p>
+        <h3>Step 51: Learn cold-hammering</h3>
+        <p>To continue, you must take a native copper nugget and repeatedly strike it with a hammerstone. This process shapes the copper without heating it. You will notice that the copper becomes harder as you hammer it (work hardening), but also becomes brittle. You can soften it again by heating it in a fire (annealing). If you do not learn cold-hammering, you cannot shape metal into useful tools. If you cannot shape metal, you cannot advance beyond the Stone Age, and you will not be able to complete the transaction.</p>
+        <h3>Step 52: Build a furnace for smelting</h3>
+        <p>To continue, you must construct a furnace capable of reaching temperatures above 1,085°C (the melting point of copper). Dig a pit and line it with clay. Build walls using stone or clay bricks, leaving an opening at the bottom for air intake. Create a bellows by attaching an animal skin bag to a wooden frame with a clay nozzle. Pumping the bellows forces air into the furnace, increasing oxygen supply and raising the temperature. If you do not build a furnace, you cannot melt rocks to extract metal. If you cannot extract metal from rocks, your metal supply will be limited to rare native nuggets, and you will not be able to complete the transaction.</p>
+        <h3>Step 53: Locate copper ore</h3>
+        <p>To continue, you must find rocks containing copper compounds such as malachite (green), azurite (blue), or cuprite (red). These are typically found in mountainous regions with volcanic activity. Learn to identify these minerals by their distinctive colors. If you do not locate copper ore, you will run out of native copper. If you run out of copper, you cannot make enough tools for everyone, and you will not be able to complete the transaction.</p>
+        <h3>Step 54: Smelt copper ore</h3>
+        <p>To continue, you must place copper ore and charcoal in alternating layers inside your furnace. Light the charcoal and use bellows to achieve maximum temperature. At high temperatures, the carbon in the charcoal reacts with the oxygen in the copper ore through a reduction reaction: CuO + C → Cu + CO. The pure copper sinks to the bottom of the furnace, while impurities (slag) float on top. Once cooled, break open the furnace to retrieve the copper ingot. If you do not smelt copper ore, you cannot produce copper in large quantities. If you cannot produce copper in quantities, metal will remain rare and precious, and you will not be able to complete the transaction.</p>
+        <h3>Step 55: Cast copper into tools</h3>
+        <p>To continue, you must carve a mold from stone or shape one from clay. Create the negative shape of your desired tool in the mold. Heat copper in a crucible until it becomes liquid (above 1,085°C), then carefully pour the molten copper into the mold. Allow it to cool completely before removing. Finish the tool by hammering the edges to work-harden them and grinding to sharpen. If you do not cast copper into tools, you will only have crude hammered implements. If you only have crude implements, your work will be inefficient, and you will not be able to complete the transaction.</p>
+        <h3>Step 56: Locate tin ore</h3>
+        <p>To continue, you must find cassiterite (tin oxide, SnO2), a heavy dark mineral typically found in alluvial deposits or granite formations. Tin is relatively rare and may require extensive trade networks to obtain if it is not locally available. If you do not find tin, you cannot mix it with your copper. If you cannot mix it with copper, you will not create bronze. If you do not have bronze, your tools will be too soft to cut harder materials, and you will not be able to complete the transaction.</p>
+        <h3>Step 57: Smelt bronze</h3>
+        <p>To continue, you must combine approximately 88% copper with 12% tin in your furnace. First, smelt each ore separately, then melt the two metals together. The tin lowers the melting point of the mixture and makes it flow more easily into molds. The resulting bronze is significantly harder than pure copper and holds a sharper edge. If you do not smelt bronze, you will remain in the Copper Age. If you remain in the Copper Age, neighboring peoples with bronze weapons will conquer you, and you will not be able to complete the transaction.</p>
+        <h3>Step 58: Develop advanced bronze casting</h3>
+        <p>To continue, you must create more sophisticated molds using the lost-wax technique. First, sculpt your desired object in beeswax. Then coat the wax model in layers of clay, leaving small channels. Heat the mold to melt out the wax, then pour in molten bronze. Once cooled, break the clay mold to reveal the bronze casting. This technique allows for complex shapes like hollow vessels and intricate weapons. If you do not develop advanced casting, your tools will be crude and heavy. If your tools are crude, your civilization will be outcompeted, and you will not be able to complete the transaction.</p>
+        <h3>Step 59: Discover iron ore</h3>
+        <p>To continue, you must find rocks containing iron oxides such as hematite (Fe2O3), magnetite (Fe3O4), or limonite. Iron ore is more common than copper or tin but requires much higher temperatures to smelt. Identify hematite by its reddish-brown color and magnetite by its magnetic properties. If you do not find iron ore, you will be stuck with bronze. If you are stuck with bronze, you cannot advance to the Iron Age. If you do not advance to the Iron Age, you will fall behind technologically, and you will not be able to complete the transaction.</p>
+        <h3>Step 60: Build a bloomery furnace</h3>
+        <p>To continue, you must construct a furnace capable of reaching 1,200°C or higher. Build a cylindrical structure from clay bricks approximately 1-2 meters tall. Create multiple tuyeres (air inlets) around the base connected to bellows. Line the interior with refractory clay that can withstand high temperatures. If you do not build a bloomery furnace, iron ore will not reduce to metal. If iron ore does not reduce, you cannot produce iron, and you will not be able to complete the transaction.</p>
+        <h3>Step 61: Smelt iron</h3>
+        <p>To continue, you must fill your bloomery with alternating layers of iron ore and charcoal. Light the charcoal and work the bellows continuously for many hours. The carbon monoxide produced by the burning charcoal reduces the iron oxide: Fe2O3 + 3CO → 2Fe + 3CO2. Unlike copper, iron does not fully melt in a bloomery; instead, it forms a spongy mass called a bloom, mixed with slag. If you do not smelt iron, you cannot produce iron tools. If you cannot produce iron tools, you will be conquered by those who can, and you will not be able to complete the transaction.</p>
+        <h3>Step 62: Work the iron bloom</h3>
+        <p>To continue, you must remove the bloom from the furnace while it is still hot and repeatedly hammer it on an anvil. This process, called forging, squeezes out the slag and consolidates the iron into a solid mass. You must reheat the iron multiple times during forging, returning it to the furnace when it cools below working temperature (approximately 800°C). If you do not work the bloom, your iron will be full of impurities. If your iron is impure, it will be weak and useless, and you will not be able to complete the transaction.</p>
+        <h3>Step 63: Learn carburization to make steel</h3>
+        <p>To continue, you must discover that heating iron in contact with carbon produces a harder material called steel. Pack iron tools in charcoal dust inside a sealed clay container and heat for many hours. Carbon atoms will diffuse into the surface of the iron, creating a high-carbon steel layer. Alternatively, fold and hammer the iron repeatedly with charcoal to distribute carbon throughout. If you do not learn to make steel, your iron will be too soft. If your iron is too soft, it cannot hold a sharp edge, and you will not be able to complete the transaction.</p>
+        <h3>Step 64: Master quenching and tempering</h3>
+        <p>To continue, you must learn to heat steel until it glows cherry-red, then plunge it quickly into water or oil. This rapid cooling locks the carbon in a hard crystalline structure called martensite. However, this makes the steel brittle, so you must then temper it by reheating to a lower temperature (200-400°C) and cooling slowly. This reduces brittleness while retaining hardness. If you do not master quenching and tempering, your steel will be either too soft or too brittle. If your steel is unreliable, your civilization cannot thrive, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 5: DEVELOPMENT OF MATHEMATICS AND WRITING</h2>
+        <h3>Step 65: Invent counting</h3>
+        <p>To continue, you must develop the concept of discrete quantities. Start by associating one object with one mark or sound. Use fingers, tally marks on bones, or pebbles to represent quantities. Create words for numbers: one, two, three, and so on. If you do not invent counting, you will not know how many dollars are in the giveaway. If you do not know how many dollars there are, you will be confused about whether <span class="us-debt">$38,422,818,570,606.64</span> is a large or small amount, and you will not be able to complete the transaction.</p>
+        <h3>Step 66: Develop a positional number system</h3>
+        <p>To continue, you must invent a system where the position of a digit determines its value. For example, in the number 243, the 2 represents two hundreds, the 4 represents four tens, and the 3 represents three ones. You must also invent a symbol for zero to serve as a placeholder. The Babylonians used base-60, the Mayans used base-20, but base-10 became most common due to our ten fingers. If you do not develop positional notation, numbers like <span class="us-debt">$38,422,818,570,606.64</span> would be impossibly long strings of symbols, and you will not be able to complete the transaction.</p>
+        <h3>Step 67: Invent arithmetic</h3>
+        <p>To continue, you must develop systematic methods for addition, subtraction, multiplication, and division. Create algorithms that work for any numbers: carry digits when sums exceed your base, borrow when subtracting, use repeated addition for multiplication, and repeated subtraction for division. If you do not invent arithmetic, you cannot calculate your share of the giveaway. If you cannot calculate your share, you will not know if you received the correct amount, and you will not be able to complete the transaction.</p>
+        <h3>Step 68: Develop geometry</h3>
+        <p>To continue, you must study the properties of shapes, lines, and angles. This is essential for surveying land, constructing buildings, and navigation. Learn that the angles in a triangle sum to 180 degrees, that a circle&#39;s circumference is π times its diameter, and that the Pythagorean theorem relates the sides of right triangles. If you do not develop geometry, you cannot build structures that stand up. If you cannot build structures, you will have no buildings to house computers, and you will not be able to complete the transaction.</p>
+        <h3>Step 69: Invent algebra</h3>
+        <p>To continue, you must develop methods for solving equations with unknown quantities. Use symbols to represent unknown values and manipulate equations according to consistent rules. Learn to solve linear equations like 3x + 5 = 20, and quadratic equations like x² + 5x + 6 = 0. If you do not invent algebra, you cannot solve complex mathematical problems. If you cannot solve complex problems, you cannot develop computer algorithms, and you will not be able to complete the transaction.</p>
+        <h3>Step 70: Develop calculus</h3>
+        <p>To continue, you must invent mathematical methods for analyzing continuous change. This includes derivatives (rates of change) and integrals (accumulated quantities). Understand that the derivative of position is velocity, and the derivative of velocity is acceleration. Learn that integration is the reverse of differentiation. If you do not develop calculus, you cannot model physical systems accurately. If you cannot model physical systems, you cannot design electronic circuits, and you will not be able to complete the transaction.</p>
+        <h3>Step 71: Invent writing</h3>
+        <p>To continue, you must create symbols that represent sounds or ideas and can be recorded on a physical medium. Begin with pictographs that represent objects directly, then develop ideographs that represent abstract concepts. Eventually create phonographic writing where symbols represent sounds, allowing any spoken word to be written. If you do not invent writing, you cannot record information. If you cannot record information, you cannot write these instructions. If these instructions are not written, you will not know what to do, and you will not be able to complete the transaction.</p>
+        <h3>Step 72: Develop an alphabet</h3>
+        <p>To continue, you must create a set of approximately 20-30 symbols that represent individual sounds (phonemes) rather than whole words or syllables. This makes writing more efficient and easier to learn. The Phoenician alphabet, ancestor of Greek, Latin, Arabic, and Hebrew scripts, had 22 letters. If you do not develop an alphabet, writing will require thousands of characters. If writing requires thousands of characters, few people will be literate. If few people are literate, not enough people can participate in the giveaway, and you will not be able to complete the transaction.</p>
+        <h3>Step 73: Invent paper</h3>
+        <p>To continue, you must create a thin, flat writing surface from plant fibers. Soak bark, hemp, or cotton in water until it breaks down into pulp. Spread the pulp thinly on a screen and press out the water. Allow to dry into a sheet. Paper is lighter and cheaper than clay tablets, parchment, or papyrus. If you do not invent paper, writing will remain expensive. If writing is expensive, information cannot spread widely. If information cannot spread, knowledge will be lost, and you will not be able to complete the transaction.</p>
+        <h3>Step 74: Invent the printing press</h3>
+        <p>To continue, you must create movable type by carving individual letters onto small blocks of metal or wood. Arrange these blocks to form words and sentences, apply ink, and press paper against them to create multiple identical copies of a text. If you do not invent the printing press, every document must be copied by hand. If every document is copied by hand, books will be rare and expensive. If books are rare, knowledge will spread slowly, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 6: SCIENTIFIC REVOLUTION</h2>
+        <h3>Step 75: Develop the scientific method</h3>
+        <p>To continue, you must establish a systematic approach to investigating phenomena. This involves observation, hypothesis formation, experimentation, and analysis. You must demand that hypotheses be testable and falsifiable. Results must be reproducible by independent researchers. If you do not develop the scientific method, knowledge will be based on superstition and authority. If knowledge is based on superstition, technology will not advance, and you will not be able to complete the transaction.</p>
+        <h3>Step 76: Discover the laws of motion</h3>
+        <p>To continue, you must observe that objects remain at rest or in uniform motion unless acted upon by a force (First Law), that force equals mass times acceleration (Second Law), and that every action has an equal and opposite reaction (Third Law). If you do not discover the laws of motion, you cannot predict how objects will behave. If you cannot predict behavior, you cannot design machines, and you will not be able to complete the transaction.</p>
+        <h3>Step 77: Discover the law of universal gravitation</h3>
+        <p>To continue, you must realize that every object in the universe attracts every other object with a force proportional to the product of their masses and inversely proportional to the square of the distance between them: F = G(m₁m₂)/r². If you do not discover gravity, you will not understand why objects fall. If you do not understand falling, you might drop your computer. If you drop your computer, it will break, and you will not be able to complete the transaction.</p>
+        <h3>Step 78: Develop the theory of electromagnetism</h3>
+        <p>To continue, you must discover that electricity and magnetism are related phenomena. Moving electric charges create magnetic fields, and changing magnetic fields create electric currents. Formalize this in Maxwell&#39;s equations, which describe how electric and magnetic fields propagate as waves. If you do not develop electromagnetism, you cannot understand how electricity works. If you do not understand electricity, you cannot power electronic devices, and you will not be able to complete the transaction.</p>
+        <h3>Step 79: Discover the electron</h3>
+        <p>To continue, you must perform experiments that reveal the existence of subatomic particles with negative charge. Use cathode ray tubes to show that rays of &quot;something&quot; travel from negative to positive electrodes. Measure the charge-to-mass ratio and conclude that these particles (electrons) are much lighter than atoms. If you do not discover the electron, you cannot understand electric current. If you cannot understand electric current, you cannot design circuits, and you will not be able to complete the transaction.</p>
+        <h3>Step 80: Develop quantum mechanics</h3>
+        <p>To continue, you must discover that at atomic scales, particles have wave-like properties and can only exist in discrete energy states. Light comes in packets called photons. Electrons orbit atoms in quantized shells. The uncertainty principle states you cannot simultaneously know a particle&#39;s exact position and momentum. If you do not develop quantum mechanics, you cannot understand semiconductors. If you cannot understand semiconductors, you cannot build computer chips, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 7: INDUSTRIAL REVOLUTION</h2>
+        <h3>Step 81: Invent the steam engine</h3>
+        <p>To continue, you must build a device that converts heat into mechanical motion. Boil water in a sealed container to create high-pressure steam. Direct the steam through a valve into a cylinder where it pushes a piston. Connect the piston to a crankshaft to create rotary motion. Use a separate condenser to cool the exhaust steam, creating a vacuum that pulls the piston back. If you do not invent the steam engine, you cannot power factories. If you cannot power factories, manufacturing will remain slow, and you will not be able to complete the transaction.</p>
+        <h3>Step 82: Develop industrial steel production</h3>
+        <p>To continue, you must invent the Bessemer process or similar method for mass-producing steel. This involves blowing air through molten pig iron to remove carbon and impurities through oxidation. The process takes only 20 minutes compared to days for previous methods and produces steel cheaply in large quantities. If you do not develop industrial steel production, steel will remain expensive. If steel is expensive, you cannot build the infrastructure for modern technology, and you will not be able to complete the transaction.</p>
+        <h3>Step 83: Build railroads</h3>
+        <p>To continue, you must lay parallel steel tracks across the land, construct steam locomotives, and establish a transportation network. This enables rapid movement of goods and people, accelerating trade and industrialization. If you do not build railroads, transporting materials will be slow. If transport is slow, factories cannot receive raw materials or ship products efficiently, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 8: ELECTRICITY AND TELECOMMUNICATIONS</h2>
+        <h3>Step 84: Harness electricity</h3>
+        <p>To continue, you must learn to generate and control electric current. Build a generator by rotating a coil of wire within a magnetic field—this induces an electric current through electromagnetic induction. Alternatively, use chemical reactions in a battery to produce current. Create circuits using conductive wires to direct electricity where needed. If you do not harness electricity, your lightbulbs will not turn on. If your lightbulbs do not turn on, you will be in the dark. If you are in the dark, you cannot see your computer screen, and you will not be able to complete the transaction.</p>
+        <h3>Step 85: Invent the electric motor</h3>
+        <p>To continue, you must build a device that converts electrical energy into rotational motion. Pass current through a coil of wire placed between the poles of a magnet. The interaction between the magnetic field of the current and the permanent magnet creates a force that rotates the coil. Use a commutator to reverse the current direction each half-rotation, maintaining continuous rotation. If you do not invent the electric motor, machines must be powered by steam or water. If machines require steam or water, they cannot be portable, and you will not be able to complete the transaction.</p>
+        <h3>Step 86: Develop electrical power distribution</h3>
+        <p>To continue, you must build power plants that generate large amounts of electricity and transmission lines that carry it to homes and businesses. Use transformers to step up voltage for efficient long-distance transmission, then step it down for safe use. Establish standards for voltage (110V or 220V) and frequency (50Hz or 60Hz). If you do not develop power distribution, each building would need its own generator. If each building needs a generator, electricity will be expensive and unreliable, and you will not be able to complete the transaction.</p>
+        <h3>Step 87: Invent the telegraph</h3>
+        <p>To continue, you must create a system for sending coded electrical pulses over long distances through wires. Develop a code (such as Morse code) that represents letters as patterns of short and long signals. Build a key for sending and a sounder for receiving. Lay telegraph lines connecting cities. If you do not invent the telegraph, long-distance communication will require physical messengers. If communication requires messengers, it will take days instead of seconds, and you will not be able to complete the transaction.</p>
+        <h3>Step 88: Invent the telephone</h3>
+        <p>To continue, you must create a device that converts sound waves into electrical signals and back again. Use a diaphragm that vibrates in response to sound waves, attached to a mechanism that varies electrical current proportionally. At the receiving end, use the varying current to drive a speaker that recreates the original sound. If you do not invent the telephone, you cannot have voice conversations over distance. If you cannot have voice conversations, customer support will be very inconvenient, and you will not be able to complete the transaction.</p>
+        <h3>Step 89: Develop radio transmission</h3>
+        <p>To continue, you must learn to transmit information wirelessly using electromagnetic waves. Build an oscillator that generates radio frequency signals, modulate those signals with information (audio or data), amplify and transmit them via an antenna. Build receivers that capture the signals and demodulate them back into the original information. If you do not develop radio, wireless communication will be impossible. If wireless communication is impossible, you cannot have WiFi, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 9: EARLY COMPUTING</h2>
+        <h3>Step 90: Invent Boolean algebra</h3>
+        <p>To continue, you must develop a mathematical system with only two values: true and false (or 1 and 0). Define operations such as AND (both must be true), OR (at least one must be true), and NOT (reverse the value). Prove that any logical statement can be expressed using combinations of these operations. This forms the mathematical basis for digital circuits. If you do not invent Boolean algebra, you cannot design logic gates. If you cannot design logic gates, computers cannot perform calculations, and you will not be able to complete the transaction.</p>
+        <h3>Step 91: Build mechanical computers</h3>
+        <p>To continue, you must construct machines that perform calculations using gears, levers, and cams. Design a mechanism where the position of each gear represents a digit, and rotating gears performs arithmetic operations. Build machines like the Pascaline (addition) and Leibniz wheel (multiplication). If you do not build mechanical computers, you must perform all calculations by hand. If you perform calculations by hand, complex computations take too long, and you will not be able to complete the transaction.</p>
+        <h3>Step 92: Develop the concept of programmability</h3>
+        <p>To continue, you must invent the idea of a general-purpose machine that can be configured to perform different tasks through instructions. Design systems using punched cards or tapes where the pattern of holes represents instructions. Build machines that read these patterns and perform corresponding operations. If you do not develop programmability, each machine can only perform one function. If machines cannot be programmed, you cannot create software, and you will not be able to complete the transaction.</p>
+        <h3>Step 93: Build a vacuum tube</h3>
+        <p>To continue, you must create a glass tube with the air removed and metal electrodes sealed inside. When heated, the cathode emits electrons that can be controlled by applying voltage to a grid electrode. This allows small voltage changes to control large current flows, enabling amplification and switching. Vacuum tubes can implement Boolean logic gates: connect them so that the output is high only when specific input combinations are present. If you do not build vacuum tubes, electronic switching is impossible. If electronic switching is impossible, electronic computers cannot exist, and you will not be able to complete the transaction.</p>
+        <h3>Step 94: Build the first electronic computer</h3>
+        <p>To continue, you must construct a machine using thousands of vacuum tubes wired together to perform calculations. Connect tubes to form logic gates (AND, OR, NOT), combine gates into arithmetic circuits (adders, multipliers), and add memory using delay lines or cathode ray tubes. The ENIAC, built in 1945, used 17,468 vacuum tubes and could perform 5,000 additions per second. If you do not build the first electronic computer, computation will be slow. If computation is slow, modern applications are impossible, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 10: SEMICONDUCTOR TECHNOLOGY</h2>
+        <h3>Step 95: Understand semiconductors</h3>
+        <p>To continue, you must study materials like silicon and germanium that have electrical conductivity between conductors and insulators. Learn that their conductivity can be controlled by adding impurities (dopants). N-type semiconductors have extra electrons (negative carriers), while P-type have electron &quot;holes&quot; (positive carriers). If you do not understand semiconductors, you cannot build transistors. If you cannot build transistors, computers will remain the size of rooms, and you will not be able to complete the transaction.</p>
+        <h3>Step 96: Grow a silicon crystal</h3>
+        <p>To continue, you must produce extremely pure silicon (99.9999999% pure). Start with quartzite (silicon dioxide) and reduce it with carbon in an electric arc furnace to produce metallurgical-grade silicon. Then convert this to trichlorosilane gas and distill it to remove impurities. Finally, reduce the purified gas with hydrogen to produce polycrystalline silicon. Use the Czochralski process to grow a single crystal: melt the polysilicon in a crucible, dip in a seed crystal, and slowly pull it upward while rotating. The silicon solidifies on the seed, forming a large cylindrical crystal called a boule. If you do not grow a silicon crystal, you cannot make silicon wafers. If you cannot make wafers, you cannot fabricate chips, and you will not be able to complete the transaction.</p>
+        <h3>Step 97: Slice silicon wafers</h3>
+        <p>To continue, you must cut the silicon boule into thin circular wafers. Use a diamond-edged saw to slice wafers approximately 0.5-1mm thick. Polish the wafers to an atomically smooth surface using progressively finer abrasives. The final surface roughness must be less than a few nanometers. Any scratches or particles will cause defects in the transistors. If you do not slice and polish wafers, you have no substrate for circuits. If you have no substrate, you cannot build chips, and you will not be able to complete the transaction.</p>
+        <h3>Step 98: Build a cleanroom</h3>
+        <p>To continue, you must construct a manufacturing facility with extremely controlled air quality. Use HEPA filters to remove particles larger than 0.1 micrometers. Control temperature to ±0.1°C and humidity to ±1%. Workers must wear full-body suits (bunny suits) and pass through air showers. A single dust particle can ruin thousands of transistors. If you do not build a cleanroom, contamination will destroy your chips. If your chips are destroyed, you cannot manufacture computers, and you will not be able to complete the transaction.</p>
+        <h3>Step 99: Invent the transistor</h3>
+        <p>To continue, you must create a device that uses semiconductor materials to amplify or switch electrical signals. The basic bipolar junction transistor (BJT) consists of three layers of semiconductor: either NPN or PNP. When a small current flows into the base, it allows a larger current to flow from collector to emitter. Alternatively, create a field-effect transistor (FET) where voltage on a gate electrode controls current flow between source and drain through an electric field. If you do not invent the transistor, you cannot shrink electronic switches. If you cannot shrink switches, computers remain large and expensive, and you will not be able to complete the transaction.</p>
+        <h3>Step 100: Develop photolithography</h3>
+        <p>To continue, you must invent a process for transferring microscopic patterns onto silicon. First, coat the wafer with a light-sensitive chemical called photoresist. Then expose the photoresist to ultraviolet light through a mask containing your circuit pattern. Develop the resist to remove either the exposed or unexposed areas (depending on resist type). The remaining resist pattern protects underlying silicon during subsequent processing steps. If you do not develop photolithography, you cannot create tiny circuit features. If you cannot create tiny features, chips cannot contain many transistors, and you will not be able to complete the transaction.</p>
+        <h3>Step 101: Master ion implantation</h3>
+        <p>To continue, you must learn to precisely add dopant atoms to silicon. Ionize atoms of boron (for P-type) or phosphorus/arsenic (for N-type), accelerate them to high energy in an electric field, and fire them into the silicon wafer. The depth of penetration depends on energy; the dose depends on beam current and exposure time. After implantation, anneal the wafer at high temperature to repair crystal damage and activate the dopants. If you do not master ion implantation, you cannot control transistor properties precisely. If you cannot control transistors, circuits will be unreliable, and you will not be able to complete the transaction.</p>
+        <h3>Step 102: Deposit thin films</h3>
+        <p>To continue, you must learn to deposit layers of various materials onto the wafer surface. For insulators like silicon dioxide, use chemical vapor deposition (CVD): flow gases over the heated wafer where they react to form a solid film. For metals like aluminum or copper, use physical vapor deposition (PVD): vaporize the metal in a vacuum chamber and allow it to condense on the wafer. Control film thickness to within nanometers. If you do not deposit thin films, you cannot build the layers of a chip. If you cannot build layers, circuits cannot function, and you will not be able to complete the transaction.</p>
+        <h3>Step 103: Develop plasma etching</h3>
+        <p>To continue, you must create a process for removing material in precise patterns. Generate a plasma (ionized gas) containing reactive chemicals like fluorine or chlorine compounds. The plasma chemically attacks exposed silicon or other materials while the photoresist mask protects desired areas. Control etch rate and selectivity to stop at the correct depth. Develop anisotropic etching techniques that etch straight down without undercutting the mask. If you do not develop plasma etching, you cannot create fine features. If you cannot create fine features, transistors will be too large, and you will not be able to complete the transaction.</p>
+        <h3>Step 104: Build a MOSFET</h3>
+        <p>To continue, you must construct a Metal-Oxide-Semiconductor Field-Effect Transistor, the fundamental building block of modern chips. Start with a P-type silicon wafer. Grow a thin layer of silicon dioxide (the gate oxide) on the surface. Deposit and pattern polysilicon or metal for the gate electrode. Implant N-type dopants on either side of the gate to create source and drain regions. When voltage is applied to the gate, it creates an electric field that attracts electrons to form a conductive channel between source and drain. If you do not build MOSFETs, you cannot create modern integrated circuits. If you cannot create integrated circuits, computers cannot be small, and you will not be able to complete the transaction.</p>
+        <h3>Step 105: Invent the integrated circuit</h3>
+        <p>To continue, you must figure out how to build multiple transistors and their connections on a single piece of silicon. Develop multi-layer fabrication processes that build transistors, then deposit insulating layers, then pattern metal wires for connections, then more insulating layers, then more metal layers. Modern chips have over 10 metal layers. Design rules ensure that features do not interfere with each other. If you do not invent integrated circuits, each transistor must be separately packaged and wired. If transistors are separate, a computer will require rooms full of equipment, and you will not be able to complete the transaction.</p>
+        <h3>Step 106: Scale transistors smaller</h3>
+        <p>To continue, you must continuously shrink transistor dimensions according to Moore&#39;s Law. As transistors shrink, more fit on each chip, increasing processing power while reducing cost. Develop extreme ultraviolet (EUV) lithography using 13.5nm wavelength light to print features below 10nm. Develop FinFET transistors where the channel wraps around a vertical fin for better electrostatic control. If you do not scale transistors smaller, computing power will stagnate. If computing power stagnates, modern software cannot run, and you will not be able to complete the transaction.</p>
+        <h3>Step 107: Build a microprocessor</h3>
+        <p>To continue, you must integrate all the components of a central processing unit onto a single chip. Include arithmetic logic units (ALUs) for calculations, registers for temporary data storage, cache memory for fast access to frequent data, and control logic that fetches and executes instructions. Design the instruction set—the commands the processor understands. Implement pipelining to execute multiple instructions simultaneously. If you do not build a microprocessor, computers will require multiple expensive chips. If computers are expensive, few people can afford them, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 11: COMPUTER SYSTEMS</h2>
+        <h3>Step 108: Invent assembly language</h3>
+        <p>To continue, you must create a human-readable representation of machine code. Assign mnemonic names to each machine instruction (e.g., MOV for move, ADD for add, JMP for jump). Create an assembler program that translates these mnemonics into binary machine code. This makes programming much easier than writing raw binary. If you do not invent assembly language, programmers must write in binary. If programmers write in binary, software development takes forever, and you will not be able to complete the transaction.</p>
+        <h3>Step 109: Invent high-level programming languages</h3>
+        <p>To continue, you must create languages that abstract away hardware details. Design syntax that resembles human language or mathematical notation. Create compilers that translate high-level code into machine code. Develop languages like FORTRAN for scientific computing, COBOL for business, C for systems programming, and later Python, Java, and JavaScript for various applications. If you do not invent high-level languages, programming remains difficult. If programming is difficult, there will not be enough programmers to create all necessary software, and you will not be able to complete the transaction.</p>
+        <h3>Step 110: Build a compiler</h3>
+        <p>To continue, you must create a program that translates source code in a high-level language into machine code. The compiler must perform lexical analysis (break code into tokens), parsing (build a syntax tree), semantic analysis (check types and scope), optimization (improve efficiency), and code generation (produce machine instructions). This is an extremely complex task. If you do not build a compiler, high-level languages are useless. If high-level languages are useless, software development is impossible, and you will not be able to complete the transaction.</p>
+        <h3>Step 111: Develop an operating system</h3>
+        <p>To continue, you must create software that manages computer hardware and provides services for applications. Implement a kernel that handles memory management (allocating and freeing memory), process scheduling (deciding which program runs when), file systems (organizing data on storage devices), and device drivers (interfacing with hardware). Create system calls that allow applications to request services. If you do not develop an operating system, each program must directly control hardware. If programs directly control hardware, they will conflict with each other and crash, and you will not be able to complete the transaction.</p>
+        <h3>Step 112: Implement memory management</h3>
+        <p>To continue, your operating system must track which parts of memory are in use and which are free. Implement virtual memory, which uses disk storage to simulate more RAM than physically exists. Create page tables that map virtual addresses to physical addresses. Implement demand paging, loading pages from disk only when needed. Handle page faults when a program accesses memory not currently in RAM. If you do not implement memory management, programs will overwrite each other&#39;s data. If programs overwrite each other, the computer will crash, and you will not be able to complete the transaction.</p>
+        <h3>Step 113: Implement a file system</h3>
+        <p>To continue, you must organize data on storage devices in a structured way. Create a hierarchical system of directories (folders) containing files. Track which disk blocks belong to which files using structures like inodes (Unix) or file allocation tables (FAT). Implement journaling to prevent data corruption if power fails during a write. If you do not implement a file system, you cannot save or retrieve data. If you cannot save data, you cannot store your claim information, and you will not be able to complete the transaction.</p>
+        <h3>Step 114: Create a graphical user interface</h3>
+        <p>To continue, you must develop software that displays visual elements on screen and responds to mouse and keyboard input. Create a windowing system that allows multiple programs to display simultaneously. Implement widgets like buttons, text boxes, and menus. Handle events like mouse clicks and key presses, routing them to the appropriate window. If you do not create a GUI, users must type commands. If users must type commands, most people cannot use computers, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 12: NETWORKING</h2>
+        <h3>Step 115: Develop packet switching</h3>
+        <p>To continue, you must invent a method of sending data by breaking it into small pieces called packets. Each packet contains a header with source and destination addresses plus error-checking information. Packets can take different routes through the network and be reassembled at the destination. This is more efficient and robust than circuit switching. If you do not develop packet switching, networks will be inefficient. If networks are inefficient, the internet cannot scale, and you will not be able to complete the transaction.</p>
+        <h3>Step 116: Create the Internet Protocol (IP)</h3>
+        <p>To continue, you must design a protocol that allows different networks to communicate. Each device receives a unique IP address (e.g., 192.168.1.1 for IPv4). Routers examine packet headers and forward them toward their destinations. Implement IP routing tables and protocols like BGP for exchanging routing information between autonomous systems. If you do not create IP, networks remain isolated. If networks are isolated, there is no internet, and you will not be able to complete the transaction.</p>
+        <h3>Step 117: Create the Transmission Control Protocol (TCP)</h3>
+        <p>To continue, you must develop a protocol that ensures reliable data delivery over IP. TCP establishes connections using a three-way handshake (SYN, SYN-ACK, ACK). It breaks data into segments, adds sequence numbers, and retransmits lost segments. It implements flow control to prevent overwhelming receivers and congestion control to prevent overwhelming the network. If you do not create TCP, data transmission will be unreliable. If data transmission is unreliable, your claim information might not arrive, and you will not be able to complete the transaction.</p>
+        <h3>Step 118: Develop DNS</h3>
+        <p>To continue, you must create the Domain Name System that translates human-readable names like &quot;securecentrix81.com&quot; into IP addresses like &quot;93.184.216.34&quot;. Build a hierarchical distributed database of name servers. Implement caching to reduce load on authoritative servers. Without DNS, you would need to memorize IP addresses for every website. If you do not develop DNS, websites are hard to find. If websites are hard to find, no one will visit Secure Centrix81, and you will not be able to complete the transaction.</p>
+        <h3>Step 119: Create HTTP</h3>
+        <p>To continue, you must develop the Hypertext Transfer Protocol for requesting and transmitting web pages. Define request methods like GET (retrieve a resource) and POST (submit data). Define response codes like 200 (OK), 404 (Not Found), and 500 (Server Error). Implement headers for metadata like Content-Type and Set-Cookie. If you do not create HTTP, web pages cannot be transmitted. If web pages cannot be transmitted, websites cannot exist, and you will not be able to complete the transaction.</p>
+        <h3>Step 120: Develop HTTPS and TLS</h3>
+        <p>To continue, you must secure HTTP communications using Transport Layer Security. Implement asymmetric encryption for key exchange, using algorithms like RSA or Elliptic Curve. Use symmetric encryption like AES for the actual data, because it&#39;s faster. Create certificate authorities that verify website identities. Display a padlock icon when connections are secure. If you do not develop HTTPS, hackers can steal your information. If hackers steal your information, they will claim the giveaway instead of you, and you will not be able to complete the transaction.</p>
+        <h3>Step 121: Build network infrastructure</h3>
+        <p>To continue, you must physically connect computers around the world. Lay fiber optic cables across ocean floors—over 400 submarine cables spanning more than 1.3 million kilometers. Build data centers to host servers. Deploy routers, switches, and access points. Launch satellites for remote areas. If you do not build network infrastructure, the internet cannot exist. If the internet cannot exist, you cannot reach the website, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 13: WEB DEVELOPMENT</h2>
+        <h3>Step 122: Create HTML</h3>
+        <p>To continue, you must develop a markup language for structuring web pages. Define tags like <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, and <code>&lt;div&gt;</code>. Specify how tags nest within each other. Create attributes like <code>href</code> for links and <code>src</code> for images. Your HTML must be valid and well-formed. If you do not create HTML, web pages cannot have structure. If web pages cannot have structure, they are just plain text, and you will not be able to complete the transaction.</p>
+        <h3>Step 123: Create CSS</h3>
+        <p>To continue, you must develop Cascading Style Sheets for controlling the visual presentation of web pages. Define selectors that target HTML elements (by tag name, class, ID, or attribute). Specify properties like <code>color</code>, <code>font-size</code>, <code>margin</code>, <code>padding</code>, <code>display</code>, and <code>position</code>. Implement the cascade, where later rules override earlier ones. Implement specificity, where more specific selectors take precedence. If you do not create CSS, web pages will look plain and ugly. If web pages are ugly, users will not trust Secure Centrix81, and you will not be able to complete the transaction.</p>
+        <h3>Step 124: Create JavaScript</h3>
+        <p>To continue, you must develop a programming language that runs in web browsers to add interactivity. Implement variables, functions, conditionals, loops, and objects. Allow JavaScript to manipulate the Document Object Model (DOM) to change page content dynamically. Implement event handlers that respond to user actions like clicks and key presses. Create XMLHttpRequest (and later fetch) for making requests without reloading the page. If you do not create JavaScript, web pages are static. If web pages are static, you cannot have interactive forms, and you will not be able to complete the transaction.</p>
+        <h3>Step 125: Build a JavaScript engine</h3>
+        <p>To continue, you must create software that executes JavaScript code. Parse the source code into an abstract syntax tree (AST). Implement an interpreter that walks the AST and executes operations. For speed, implement just-in-time (JIT) compilation that translates frequently executed code to machine code at runtime. Implement a garbage collector that automatically frees unused memory. Implement the event loop for asynchronous execution. If you do not build a JavaScript engine, JavaScript code cannot run. If JavaScript cannot run, web applications cannot function, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 14: BUILDING A WEB BROWSER FROM SCRATCH</h2>
+        <h3>Step 126: Implement a networking stack</h3>
+        <p>To continue, your browser must be able to fetch resources from the internet. Implement a socket library that handles TCP connections. Implement HTTP/1.1 protocol: format request strings with method, path, and headers; parse response strings to extract status code, headers, and body. Implement connection pooling to reuse connections. Implement HTTP/2 with multiplexing and header compression. Implement TLS for secure connections. If you do not implement networking, your browser cannot download web pages. If it cannot download pages, you cannot view Secure Centrix81, and you will not be able to complete the transaction.</p>
+        <h3>Step 127: Build an HTML parser</h3>
+        <p>To continue, you must write code that converts HTML text into a structured Document Object Model (DOM) tree. Implement a tokenizer that breaks HTML into tokens: start tags, end tags, attributes, and text content. Implement a tree-building algorithm that handles nested elements, including special rules for implicitly closed tags and error recovery for malformed HTML. Handle different character encodings like UTF-8. If you do not build an HTML parser, you cannot interpret web pages. If you cannot interpret pages, they appear as meaningless text, and you will not be able to complete the transaction.</p>
+        <h3>Step 128: Build a CSS parser</h3>
+        <p>To continue, you must write code that converts CSS text into a structured format. Implement tokenization of selectors, properties, and values. Parse selector syntax including combinators (descendant, child, sibling). Parse property values including units (px, em, %), colors (hex, rgb, named), and complex values like gradients and transforms. Handle @-rules like @media and @import. If you do not build a CSS parser, styles are meaningless. If styles are meaningless, pages look broken, and you will not be able to complete the transaction.</p>
+        <h3>Step 129: Implement selector matching</h3>
+        <p>To continue, you must write code that determines which CSS rules apply to each DOM element. For each element, iterate through all CSS rules and check if the selector matches. Implement matching logic for type selectors (div), class selectors (.class), ID selectors (#id), attribute selectors ([attr]), pseudo-classes (:hover), and combinations thereof. Optimize with hashing to avoid checking every rule. If you do not implement selector matching, CSS cannot be applied. If CSS cannot be applied, pages look wrong, and you will not be able to complete the transaction.</p>
+        <h3>Step 130: Implement the cascade and specificity</h3>
+        <p>To continue, you must determine which CSS property value to use when multiple rules apply to the same element and property. Calculate specificity: inline styles beat IDs, IDs beat classes, classes beat elements. Later rules beat earlier rules of equal specificity. Handle !important declarations. Implement inheritance for properties that inherit by default. Implement initial and computed values. If you do not implement the cascade, styles will conflict unpredictably. If styles conflict, pages will render incorrectly, and you will not be able to complete the transaction.</p>
+        <h3>Step 131: Build the style system</h3>
+        <p>To continue, you must compute the final styled properties for every DOM element. For each element, collect all applicable CSS rules, sort by specificity, and resolve the cascade. Convert specified values to computed values (e.g., resolving relative units like em to pixels). Handle shorthand properties by expanding them to longhand. Store the computed style for each element. If you do not build the style system, elements have no visual properties. If elements have no properties, rendering is impossible, and you will not be able to complete the transaction.</p>
+        <h3>Step 132: Implement the box model</h3>
+        <p>To continue, you must understand that every element is rendered as a rectangular box with content, padding, border, and margin areas. Calculate the width: content width plus padding plus border (unless box-sizing is border-box). Handle collapsing margins between adjacent elements. Implement both block-level and inline-level boxes with different layout behaviors. If you do not implement the box model, element sizes are wrong. If sizes are wrong, layouts are broken, and you will not be able to complete the transaction.</p>
+        <h3>Step 133: Build the layout engine</h3>
+        <p>To continue, you must implement algorithms that determine the position and size of every element on the page. Implement block layout: block elements stack vertically, each taking the full available width by default. Implement inline layout: inline elements flow horizontally, wrapping to new lines as needed. Implement line breaking and text measurement. Handle floats that take elements out of normal flow. Implement Flexbox for flexible one-dimensional layouts. Implement CSS Grid for two-dimensional layouts. Implement absolute and fixed positioning. This is extremely complex—a proper layout engine is tens of thousands of lines of code. If you do not build a layout engine, elements cannot be positioned. If elements cannot be positioned, the page is not visible, and you will not be able to complete the transaction.</p>
+        <h3>Step 134: Build a text shaping engine</h3>
+        <p>To continue, you must implement complex algorithms for rendering text correctly. Use font files (TrueType, OpenType) to obtain glyph outlines. Implement Unicode normalization. Handle bidirectional text for languages like Arabic and Hebrew. Implement ligatures (fi, fl) and kerning (adjusting space between specific letter pairs). Handle variable fonts. Use a shaping library like HarfBuzz or implement equivalent functionality. If you do not build a text shaping engine, text looks wrong. If text looks wrong, you cannot read the page, and you will not be able to complete the transaction.</p>
+        <h3>Step 135: Build a rendering engine</h3>
+        <p>To continue, you must create code that converts the layout tree into pixels on screen. Implement painting of backgrounds, borders, text, and images. Implement the painting order: backgrounds first, then borders, then block children, then floats, then inline children, then outlines. Implement stacking contexts for handling z-index. Implement clipping for overflow. Implement scrolling. Use GPU acceleration for performance. This may involve learning OpenGL, Direct3D, Metal, or Vulkan. If you do not build a rendering engine, layouts cannot become visible. If layouts are not visible, you cannot see the Claim button, and you will not be able to complete the transaction.</p>
+        <h3>Step 136: Implement compositing and layers</h3>
+        <p>To continue, you must optimize rendering by dividing the page into layers that can be composited efficiently. Identify elements that need their own layers (elements with transforms, opacity, or that are animated). Rasterize each layer to a texture. Use GPU compositing to combine layers with correct transforms and blend modes. Implement layer caching so that unchanged layers don&#39;t need to be re-rasterized. If you do not implement compositing, animations will be slow. If animations are slow, the page will feel unresponsive, and you will not be able to complete the transaction.</p>
+        <h3>Step 137: Build a JavaScript runtime</h3>
+        <p>To continue, you must integrate a JavaScript engine (like V8, SpiderMonkey, or JavaScriptCore) with your browser. Implement the event loop that processes tasks from a queue. Implement timers (setTimeout, setInterval). Implement microtasks for Promise resolution. Expose browser APIs to JavaScript. If you do not build a JavaScript runtime, scripts cannot run. If scripts cannot run, interactive features don&#39;t work, and you will not be able to complete the transaction.</p>
+        <h3>Step 138: Implement the DOM API</h3>
+        <p>To continue, you must expose the DOM tree to JavaScript, allowing scripts to read and modify page content. Implement Node, Element, and Document interfaces. Implement methods like getElementById, querySelector, createElement, appendChild, and removeChild. Implement event handling: addEventListener, removeEventListener, event bubbling and capturing. Implement mutation observers for detecting changes. If you do not implement the DOM API, JavaScript cannot manipulate the page. If JavaScript cannot manipulate the page, web applications don&#39;t work, and you will not be able to complete the transaction.</p>
+        <h3>Step 139: Implement Web APIs</h3>
+        <p>To continue, you must implement the many standard APIs that websites expect. Implement XMLHttpRequest and fetch for network requests. Implement Canvas for 2D drawing. Implement WebGL for 3D graphics. Implement Web Audio for sound. Implement WebSocket for real-time communication. Implement localStorage and IndexedDB for storage. Implement the Clipboard API, Geolocation API, Notification API, and hundreds more. Each API is a significant undertaking. If you do not implement Web APIs, websites will be broken. If websites are broken, Secure Centrix81 will not work, and you will not be able to complete the transaction.</p>
+        <h3>Step 140: Implement forms and input handling</h3>
+        <p>To continue, you must implement HTML form elements. Create text inputs that accept keyboard input, handle selection, copy/paste, and undo. Implement buttons that trigger submit events. Implement checkboxes, radio buttons, select dropdowns, and textareas. Implement form validation. Implement file input dialogs. Handle autofill. If you do not implement forms, you cannot enter your claim information. If you cannot enter information, you will not be able to complete the transaction.</p>
+        <h3>Step 141: Implement cookies and storage</h3>
+        <p>To continue, you must implement mechanisms for websites to store data. Implement cookies: parse Set-Cookie headers, store cookies per domain, include appropriate cookies in requests. Implement localStorage and sessionStorage APIs. Implement IndexedDB for structured data. Handle storage limits and quotas. If you do not implement storage, websites cannot remember you. If websites cannot remember you, your session will be lost when navigating, and you will not be able to complete the transaction.</p>
+        <h3>Step 142: Implement the history API and navigation</h3>
+        <p>To continue, you must implement browser navigation. Maintain a history stack of visited pages. Implement the back and forward buttons. Implement the History API (pushState, replaceState, popstate event) for single-page applications. Handle fragment navigation. Handle redirects. If you do not implement navigation, you cannot browse between pages. If you cannot browse, you cannot navigate Secure Centrix81, and you will not be able to complete the transaction.</p>
+        <h3>Step 143: Implement developer tools</h3>
+        <p>To continue, you must create tools for debugging websites. Implement an element inspector that shows the DOM tree and computed styles. Implement a console for JavaScript output and interactive evaluation. Implement a network panel showing all requests. Implement a debugger with breakpoints, stepping, and variable inspection. If you do not implement developer tools, you cannot debug problems. If you cannot debug problems, issues may prevent your claim, and you will not be able to complete the transaction.</p>
+        <h3>Step 144: Implement security features</h3>
+        <p>To continue, you must implement browser security to protect users. Implement the Same-Origin Policy preventing scripts from accessing data from other origins. Implement Content Security Policy. Implement sandboxing for iframes. Implement certificate validation for HTTPS. Implement a phishing and malware filter. If you do not implement security, your data will be stolen. If your data is stolen, criminals will claim your money, and you will not be able to complete the transaction.</p>
+        <h3>Step 145: Handle accessibility</h3>
+        <p>To continue, you must ensure your browser works with assistive technologies. Implement an accessibility tree derived from the DOM. Expose this tree to screen readers via platform APIs (MSAA/UIA on Windows, ATK on Linux, NSAccessibility on macOS). Handle ARIA attributes. Implement keyboard navigation. If you do not handle accessibility, some users cannot use your browser. If users cannot use your browser, they cannot participate in the giveaway, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 15: ACCESSING THE GIVEAWAY</h2>
+        <h3>Step 146: Acquire a computer</h3>
+        <p>To continue, you must obtain a device capable of running a web browser. This requires either purchasing a pre-built computer or building one yourself from components including a processor, motherboard, RAM, storage drive, power supply, and case. If you do not acquire a computer, you have nothing to run the browser on. If you have nothing to run the browser on, you cannot access websites, and you will not be able to complete the transaction.</p>
+        <h3>Step 147: Connect to the internet</h3>
+        <p>To continue, you must establish a connection to the internet. This typically involves subscribing to an Internet Service Provider (ISP), installing a modem and router, and configuring your computer&#39;s network settings. Ensure you have a stable connection with sufficient bandwidth. If you do not connect to the internet, you are isolated from the World Wide Web. If you are isolated, you cannot reach Secure Centrix81, and you will not be able to complete the transaction.</p>
+        <h3>Step 148: Open a web browser</h3>
+        <p>To continue, you must launch web browsing software on your computer. Locate the browser icon on your desktop or in your applications folder. Double-click to open it. Wait for the browser window to appear. If you do not open a web browser, the website will stay as invisible code on distant servers. If the code is invisible, you cannot see or interact with it, and you will not be able to complete the transaction.</p>
+        <h3>Step 149: Navigate to Secure Centrix81</h3>
+        <p>To continue, you must type the URL <a href="https://securecentrix81.github.io">https://securecentrix81.github.io</a>; into your browser&#39;s address bar and press Enter. Wait for the DNS lookup, TCP handshake, TLS negotiation, HTTP request, and response. Wait for the browser to parse HTML, CSS, and JavaScript. Wait for the layout engine to position elements. Wait for the rendering engine to paint pixels. If you do not navigate to the website, you cannot access the giveaway. If you cannot access the giveaway, you will not be able to complete the transaction.</p>
+        <h3>Step 150: Click the &quot;Claim&quot; button</h3>
+        <p>To continue, you must move your mouse cursor over the button labeled &quot;Claim&quot; and press the left mouse button. This will trigger a click event that JavaScript will handle, initiating the claim process. If you do not click the &quot;Claim&quot; button, the claim process will not begin. If the claim process does not begin, you will not be able to complete the transaction.</p>
+        <h3>Step 151: Enter your information</h3>
+        <p>To continue, you must type your personal information into the form fields provided. This may include your name, address, email, phone number, and payment details. Use your keyboard to input characters. Use Tab to move between fields. If you do not enter your information, the website does not know who you are. If the website does not know who you are, it cannot send you the <span class="us-debt">$38,422,818,570,606.64</span>, and you will not be able to complete the transaction.</p>
+        <h2>Step 152: Complete the captcha</h2>
+        <p><strong>To continue, you must complete the captcha below. If you do not complete the captcha, you will not be able to read the rest of the instructions and you will not be able to complete the transaction.</strong></p>
+        <h3>Step 153: Submit the form</h3>
+        <p>To continue, you must click the &quot;Submit&quot; button to send your information to the server. The browser will package your data into an HTTP POST request, encrypt it using TLS, and transmit it over the internet. If you do not submit the form, your information remains in your browser. If your information remains in your browser, the server cannot process your claim, and you will not be able to complete the transaction.</p>
+        <h3>Step 154: Wait for confirmation</h3>
+        <p>To continue, you must wait for the server to process your claim and send a response. This may take several seconds to several business days depending on server load and verification procedures. Do not close your browser or navigate away during this time. If you do not wait for confirmation, you will not know if your claim was successful. If you do not know if your claim was successful, you may miss important instructions, and you will not be able to complete the transaction.</p>
+        <hr>
+        <h2>PHASE 16: FINAL STEP</h2>
+        <h3>Step 155: Complete the transaction</h3>
+        <p>To continue, you must complete the transaction. The transaction involves all preceding steps being successfully executed in sequence. If any previous step was not completed, return to that step and complete it before proceeding. If you do not complete the transaction, you will not complete the transaction. If you do not complete the transaction, you will not receive the <span class="us-debt">$38,422,818,570,606.64</span>. If you do not receive the <span class="us-debt">$38,422,818,570,606.64</span>, you will not have completed the transaction, and therefore you will not be able to complete the transaction.</p>
+      </div>
+
+      <div class="blur-mask">
+        <div class="lower-captcha-container">
+          <div class="captcha-container" id="captcha">
+            <div class="captcha-checkbox"></div>
+            <div class="captcha-text">Please verify you are a human<br><span class="captcha-expired">Captcha expired</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/sw.js") // Absolute path to the root
+            .register("/sw.js")
             .then((reg) => console.log("Service Worker registered!", reg))
             .catch((err) => console.error("Registration failed:", err));
         });
@@ -56,6 +493,66 @@
       for (let i of toRemove) {
         if (parseInt(i.getAttribute("remove")) < Date.now()) i.remove()
       }
+    </script>
+    <script>
+      document.getElementById("captcha").addEventListener("click", () => {
+        location.href = "/captcha-verification";
+      });
+
+      let moneyTarget = 38422818570606.64;
+      let currentMoney = 38422818570606.64;
+      let growthRatePerMs = 201.651206792806;
+      let baseDebt = 38490798138585.9;
+      let baseTime = 1769040000000;
+      const apiUrl = 'https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?sort=-record_date&page[size]=2';
+
+      const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+
+      async function fetchDebt() {
+        try {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          const latest = data.data[0];
+          const previous = data.data[1];
+          const d1 = parseFloat(latest.tot_pub_debt_out_amt);
+          const d2 = parseFloat(previous.tot_pub_debt_out_amt);
+          const t1 = new Date(latest.record_date).getTime();
+          const t2 = new Date(previous.record_date).getTime();
+          growthRatePerMs = (d1 - d2) / (t1 - t2);
+          baseDebt = d1;
+          baseTime = t1;
+          currentMoney = Math.max(d1, currentMoney);
+          moneyTarget = d1;
+        } catch (error) {
+          console.error('Error fetching debt data:', error);
+        }
+      }
+
+      function simulateLiveTarget() {
+        if (baseTime > 0) {
+          const msElapsedSinceRecord = Date.now() - baseTime;
+          moneyTarget = baseDebt + (growthRatePerMs * msElapsedSinceRecord);
+        }
+      }
+
+      function updateDebt() {
+        simulateLiveTarget();
+        currentMoney += (moneyTarget - currentMoney) * 0.05;
+        const formatted = formatter.format(currentMoney);
+        for (let i of document.querySelectorAll('.us-debt')) {
+          i.innerText = formatted;
+        }
+        requestAnimationFrame(updateDebt);
+      }
+
+      updateDebt();
+      fetchDebt();
+      setInterval(fetchDebt, 1000 * 30);
     </script>
   </body>
 </html>
